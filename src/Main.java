@@ -3,7 +3,7 @@ import java.util.Random;
 public class Main {
 
     static int max(int x, int y) {
-        int res = 0;
+        int res;
 
         if(x > y) res = x;
         else res = y;
@@ -47,7 +47,7 @@ public class Main {
     }
 
     static int max_sub_array(int[] A, int low, int high) {
-        int res = 0;
+        int res;
         if(low == high) {
             return A[low];
         }
@@ -75,11 +75,11 @@ public class Main {
         }
     }
 
-    static int max_subarray_product(int[] A) {
+    static int max_product(int[] nums) {
 
-        int n = A.length;
+        int n = nums.length;
 
-        return max_sub_array(A, 0, n - 1);
+        return max_sub_array(nums, 0, n - 1);
     }
 
     public static void main(String[] args) {
@@ -88,14 +88,14 @@ public class Main {
         int n = 11;
 
         // Declare and initialize array A with random data
-        int[] A = new int[n];
+        int[] nums = new int[n];
 
-        init_array(A);
+        init_array(nums);
 
         // Compute maximum subarray product
-        int max_product = max_subarray_product(A);
+        int max_prod = max_product(nums);
 
         // Print results
-        System.out.println("maximum subarray product: " + max_product);
+        System.out.println("maximum subarray product: " + max_prod);
     }
 }
