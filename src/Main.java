@@ -2,13 +2,9 @@ import java.util.Random;
 
 public class Main {
 
-    static int max(int x, int y) {
-        int res;
+    static int max(int a, int b) {
 
-        if(x > y) res = x;
-        else res = y;
-
-        return res;
+        return Math.max(a, b);
     }
 
     static int max_crossing(int[] A, int low, int mid, int high) {
