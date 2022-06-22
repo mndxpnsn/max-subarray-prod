@@ -61,8 +61,10 @@ public class Main {
         return res;
     }
 
-    static void init_array(int[] arr, int n) {
+    static void init_array(int[] arr) {
 
+        int n = arr.length;
+        
         for(int i = 0; i < n; ++i) {
             Random r = new Random();
             int min = -10;
@@ -73,7 +75,9 @@ public class Main {
         }
     }
 
-    static int max_subarray_product(int[] A, int n) {
+    static int max_subarray_product(int[] A) {
+
+        int n = A.length;
 
         return max_sub_array(A, 0, n - 1);
     }
@@ -86,10 +90,10 @@ public class Main {
         // Declare and initialize array A with random data
         int[] A = new int[n];
 
-        init_array(A, n);
+        init_array(A);
 
         // Compute maximum subarray product
-        int max_product = max_subarray_product(A, n);
+        int max_product = max_subarray_product(A);
 
         // Print results
         System.out.println("maximum subarray product: " + max_product);
